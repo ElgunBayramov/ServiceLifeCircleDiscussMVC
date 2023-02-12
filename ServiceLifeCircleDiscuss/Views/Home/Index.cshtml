@@ -1,0 +1,10 @@
+﻿@using ServiceLifeCircleDiscuss.AppCode.Services
+@inject CryptoService cryptoService
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<h1>@ViewBag.ServiceInstanceId</h1>
+<h2>@cryptoService.InstanceId</h2>
+@await Component.InvokeAsync("Demo")
